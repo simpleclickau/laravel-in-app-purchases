@@ -87,4 +87,9 @@ class AppStoreServerNotification implements ServerNotificationContract
     {
         return $this->notification->getBid();
     }
+
+    public function getLatestReceipt(): string
+    {
+        return $this->notification->getUnifiedReceipt()->getLatestReceipt();
+    }
 }
